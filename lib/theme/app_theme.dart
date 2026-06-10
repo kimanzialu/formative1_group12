@@ -1,62 +1,88 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  static const Color aluBlue = Color(0xFF002147);
-  static const Color aluLightBlue = Color(0xFFEAF2FF);
-  static const Color aluRed = Color(0xFFE63946);
-  static const Color aluWhite = Color(0xFFFFFFFF);
-  static const Color aluGrey = Color(0xFFF5F7FA);
-  static const Color darkText = Color(0xFF1F2937);
-  static const Color mutedText = Color(0xFF6B7280);
-  static const Color borderGrey = Color(0xFFE5E7EB);
+  static const Color navy = Color(0xFF001B36);
+  static const Color deepNavy = Color(0xFF001225);
+  static const Color cardNavy = Color(0xFF0B2745);
+  static const Color softNavy = Color(0xFF123456);
+  static const Color gold = Color(0xFFFFB703);
+  static const Color goldDark = Color(0xFFE69A00);
+  static const Color white = Color(0xFFFFFFFF);
+  static const Color softWhite = Color(0xFFF5F7FA);
+  static const Color mutedText = Color(0xFF9FB3C8);
+  static const Color borderBlue = Color(0xFF1C3D5A);
 
-  static ThemeData lightTheme = ThemeData(
-    brightness: Brightness.light,
-    scaffoldBackgroundColor: aluWhite,
-    primaryColor: aluBlue,
+  static ThemeData darkTheme = ThemeData(
+    brightness: Brightness.dark,
+    scaffoldBackgroundColor: navy,
+    primaryColor: gold,
     fontFamily: 'Roboto',
-    colorScheme: const ColorScheme.light(
-      primary: aluBlue,
-      secondary: aluRed,
-      surface: aluWhite,
-      error: aluRed,
+
+    colorScheme: const ColorScheme.dark(
+      primary: gold,
+      secondary: gold,
+      surface: cardNavy,
+      error: Colors.redAccent,
     ),
+
     appBarTheme: const AppBarTheme(
-      backgroundColor: aluWhite,
+      backgroundColor: navy,
       elevation: 0,
       centerTitle: false,
       titleTextStyle: TextStyle(
-        color: aluBlue,
+        color: white,
         fontSize: 22,
         fontWeight: FontWeight.bold,
       ),
-      iconTheme: IconThemeData(color: aluBlue),
+      iconTheme: IconThemeData(color: white),
     ),
+
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      backgroundColor: aluWhite,
-      selectedItemColor: aluRed,
+      backgroundColor: deepNavy,
+      selectedItemColor: gold,
       unselectedItemColor: mutedText,
       type: BottomNavigationBarType.fixed,
       elevation: 12,
     ),
+
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: aluGrey,
+      fillColor: cardNavy,
       hintStyle: const TextStyle(color: mutedText),
       labelStyle: const TextStyle(color: mutedText),
-      prefixIconColor: aluBlue,
+      prefixIconColor: mutedText,
       suffixIconColor: mutedText,
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(14),
-        borderSide: const BorderSide(color: borderGrey),
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(color: borderBlue),
       ),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(14),
-        borderSide: const BorderSide(color: borderGrey),
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(color: borderBlue),
       ),
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(14),
-        borderSide: const BorderSide(color: aluRed, width: 1.5),
+        borderRadius: BorderRadius.circular(16),
+        borderSide: const BorderSide(color: gold, width: 1.5),
+      ),
+    ),
+
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: gold,
+        foregroundColor: deepNavy,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(18),
+        ),
+      ),
+    ),
+
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        foregroundColor: gold,
+        side: const BorderSide(color: gold),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(18),
+        ),
       ),
     ),
   );
