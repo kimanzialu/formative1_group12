@@ -68,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.aluWhite,
+      backgroundColor: AppTheme.navy,
       appBar: AppBar(
         title: const Text('Sign In'),
       ),
@@ -78,12 +78,12 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 20),
+              const SizedBox(height: 24),
 
               const Text(
-                'Welcome back',
+                'Welcome back 👋',
                 style: TextStyle(
-                  color: AppTheme.aluBlue,
+                  color: AppTheme.white,
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
@@ -92,7 +92,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 8),
 
               const Text(
-                'Sign in to discover ALU events, opportunities, and communities.',
+                'Sign in to discover events, opportunities, clubs, and academic spaces across ALU.',
                 style: TextStyle(
                   color: AppTheme.mutedText,
                   fontSize: 15,
@@ -105,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
               TextField(
                 controller: emailController,
                 keyboardType: TextInputType.emailAddress,
-                style: const TextStyle(color: AppTheme.darkText),
+                style: const TextStyle(color: AppTheme.white),
                 decoration: const InputDecoration(
                   labelText: 'Email address',
                   hintText: 'example@alustudent.com',
@@ -118,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
               TextField(
                 controller: passwordController,
                 obscureText: !showPassword,
-                style: const TextStyle(color: AppTheme.darkText),
+                style: const TextStyle(color: AppTheme.white),
                 decoration: InputDecoration(
                   labelText: 'Password',
                   hintText: 'Enter your password',
@@ -145,39 +145,32 @@ class _LoginScreenState extends State<LoginScreen> {
                   width: double.infinity,
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: AppTheme.aluRed.withOpacity(0.12),
-                    borderRadius: BorderRadius.circular(12),
+                    color: Colors.redAccent.withOpacity(0.14),
+                    borderRadius: BorderRadius.circular(14),
                     border: Border.all(
-                      color: AppTheme.aluRed.withOpacity(0.25),
+                      color: Colors.redAccent.withOpacity(0.35),
                     ),
                   ),
                   child: Text(
                     errorMessage!,
-                    style: const TextStyle(color: AppTheme.aluRed),
+                    style: const TextStyle(color: Colors.redAccent),
                   ),
                 ),
 
-              const SizedBox(height: 24),
+              const SizedBox(height: 26),
 
               SizedBox(
                 width: double.infinity,
                 height: 54,
                 child: ElevatedButton(
                   onPressed: isLoading ? null : _login,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: AppTheme.aluRed,
-                    foregroundColor: AppTheme.aluWhite,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                  ),
                   child: isLoading
                       ? const SizedBox(
                           width: 22,
                           height: 22,
                           child: CircularProgressIndicator(
                             strokeWidth: 2,
-                            color: AppTheme.aluWhite,
+                            color: AppTheme.deepNavy,
                           ),
                         )
                       : const Text(
@@ -197,13 +190,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (_) => SignupScreen()),
+                      MaterialPageRoute(builder: (_) => const SignupScreen()),
                     );
                   },
                   child: const Text(
                     'New here? Create an account',
                     style: TextStyle(
-                      color: AppTheme.aluBlue,
+                      color: AppTheme.gold,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
