@@ -16,6 +16,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
   String? selectedCampus;
   String? errorMessage;
+  bool isLoading = false;
 
   final List<String> campuses = [
     'Kigali Campus',
@@ -45,10 +46,22 @@ class _SignupScreenState extends State<SignupScreen> {
       return;
     }
 
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(builder: (_) => const MainNavigationScreen()),
-    );
+    setState(() {
+      isLoading = true;
+    });
+
+    Future.delayed(const Duration(seconds: 1), () {
+      if (!mounted) return;
+
+      setState(() {
+        isLoading = false;
+      });
+
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => const MainNavigationScreen()),
+      );
+    });
   }
 
   @override
@@ -61,7 +74,7 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.aluWhite,
+      backgroundColor: AppTheme.navy,
       appBar: AppBar(
         title: const Text('Create Account'),
       ),
@@ -72,9 +85,9 @@ class _SignupScreenState extends State<SignupScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                'Join ALU Pulse',
+                'Join ALU Connect',
                 style: TextStyle(
-                  color: AppTheme.aluBlue,
+                  color: AppTheme.white,
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
@@ -83,7 +96,7 @@ class _SignupScreenState extends State<SignupScreen> {
               const SizedBox(height: 8),
 
               const Text(
-                'Create your student profile to start discovering opportunities.',
+                'Create your student profile to start discovering campus activities and opportunities.',
                 style: TextStyle(
                   color: AppTheme.mutedText,
                   fontSize: 15,
@@ -95,7 +108,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
               TextField(
                 controller: nameController,
-                style: const TextStyle(color: AppTheme.darkText),
+                style: const TextStyle(color: AppTheme.white),
                 decoration: const InputDecoration(
                   labelText: 'Full name',
                   hintText: 'Enter your name',
@@ -108,7 +121,7 @@ class _SignupScreenState extends State<SignupScreen> {
               TextField(
                 controller: emailController,
                 keyboardType: TextInputType.emailAddress,
-                style: const TextStyle(color: AppTheme.darkText),
+                style: const TextStyle(color: AppTheme.white),
                 decoration: const InputDecoration(
                   labelText: 'Email address',
                   hintText: 'example@alustudent.com',
@@ -124,8 +137,8 @@ class _SignupScreenState extends State<SignupScreen> {
                   labelText: 'Campus',
                   prefixIcon: Icon(Icons.location_on_outlined),
                 ),
-                dropdownColor: AppTheme.aluWhite,
-                style: const TextStyle(color: AppTheme.darkText),
+                dropdownColor: AppTheme.cardNavy,
+                style: const TextStyle(color: AppTheme.white),
                 items: campuses.map((campus) {
                   return DropdownMenuItem(
                     value: campus,
@@ -146,29 +159,41 @@ class _SignupScreenState extends State<SignupScreen> {
                   width: double.infinity,
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: AppTheme.aluRed.withOpacity(0.12),
-                    borderRadius: BorderRadius.circular(12),
+                    color: Colors.redAccent.withOpacity(0.14),
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(
+                      color: Colors.redAccent.withOpacity(0.35),
+                    ),
                   ),
                   child: Text(
                     errorMessage!,
-                    style: const TextStyle(color: AppTheme.aluRed),
+                    style: const TextStyle(color: Colors.redAccent),
                   ),
                 ),
 
-              const SizedBox(height: 24),
+              const SizedBox(height: 26),
 
               SizedBox(
                 width: double.infinity,
                 height: 54,
                 child: ElevatedButton(
-                  onPressed: _createAccount,
-                  child: const Text(
-                    'Create Account',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
-                  ),
+                  onPressed: isLoading ? null : _createAccount,
+                  child: isLoading
+                      ? const SizedBox(
+                          width: 22,
+                          height: 22,
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2,
+                            color: AppTheme.deepNavy,
+                          ),
+                        )
+                      : const Text(
+                          'Create Account',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
                 ),
               ),
 
@@ -185,7 +210,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   child: const Text(
                     'Already have an account? Sign in',
                     style: TextStyle(
-                      color: AppTheme.aluBlue,
+                      color: AppTheme.gold,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
