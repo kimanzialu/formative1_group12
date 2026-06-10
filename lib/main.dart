@@ -3,19 +3,19 @@ import 'theme/app_theme.dart';
 import 'screens/onboarding_screen.dart';
 
 void main() {
-  runApp(const ALUPulseApp());
+  runApp(const ALUConnectApp());
 }
 
-class ALUPulseApp extends StatelessWidget {
-  const ALUPulseApp({super.key});
+class ALUConnectApp extends StatelessWidget {
+  const ALUConnectApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ALU Pulse',
+      title: 'ALU Intercampus Connect',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.lightTheme,
-      home: OnboardingScreen(),
+      theme: AppTheme.darkTheme,
+      home: const OnboardingScreen(),
     );
   }
 }
