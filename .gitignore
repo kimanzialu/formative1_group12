@@ -43,3 +43,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Local main entry - ignore when pushing feature branches
+lib/main.dart
