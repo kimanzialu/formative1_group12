@@ -22,7 +22,7 @@ class EventCard extends StatelessWidget {
         bottom: isHorizontal ? 0.0 : 16.0,
       ),
       decoration: BoxDecoration(
-        color: const Color(0xff1E1E2A),
+        color: const Color(0xFF112240),
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: Colors.white10),
       ),
@@ -65,7 +65,7 @@ class EventCard extends StatelessWidget {
                     vertical: 4,
                   ),
                   decoration: BoxDecoration(
-                    color: const Color(0xffFF6B00),
+                    color: const Color(0xFFFFB703),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Text(
@@ -99,7 +99,7 @@ class EventCard extends StatelessWidget {
                       child: Icon(
                         event.isRsvped ? Icons.bookmark : Icons.bookmark_border,
                         color: event.isRsvped
-                            ? Color(0xffFF6B00)
+                            ? Color(0xFFFFB703)
                             : Colors.white,
                         size: 20,
                       ),
