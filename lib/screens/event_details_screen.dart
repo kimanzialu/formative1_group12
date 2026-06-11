@@ -81,13 +81,13 @@ class EventDetailsScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   
-                  // Date and Time
+                  // Date & Time
                   Row(
                     children: [
                       const Icon(Icons.access_time, color: Colors.grey, size: 20),
                       const SizedBox(width: 8),
                       Text(
-                        '${event.date.month}/${event.date.day}/${event.date.year}', // Simplified date formatting for beginner friendliness
+                        '${event.date.month}/${event.date.day}/${event.date.year}',
                         style: const TextStyle(color: Colors.white70, fontSize: 16),
                       ),
                     ],

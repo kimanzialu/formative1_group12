@@ -288,7 +288,7 @@ final List<Map<String, dynamic>> _categories = [
                   const SizedBox(width: 4),
                   Expanded(
                     child: Text(
-                      event.date,
+                      event.date.toString(),
                       style: const TextStyle(
                           color: AppTheme.mutedText, fontSize: 12),
                       overflow: TextOverflow.ellipsis,
