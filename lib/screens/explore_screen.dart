@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
-import 'mock_events.dart';
-import 'event_model.dart';
+import '../data/mock_events.dart';
+import '../models/event_model.dart';
 import '../widgets/category_chip.dart';
 import '../widgets/filter_widget.dart';
-import 'event_detail_screen.dart';
 
 class ExploreScreen extends StatefulWidget {
   const ExploreScreen({super.key});
@@ -228,16 +227,7 @@ final List<Map<String, dynamic>> _categories = [
   }
 
   Widget _buildEventTile(EventModel event) {
-  return GestureDetector(
-    onTap: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (_) => EventDetailScreen(event: event),
-        ),
-      );
-    },
-    child: Container(
+  return Container(
     padding: const EdgeInsets.all(16),
     decoration: BoxDecoration(
       color: AppTheme.cardNavy,
@@ -341,7 +331,6 @@ final List<Map<String, dynamic>> _categories = [
             ),
           ),
       ],
-    ),
     ),
   );
 }
