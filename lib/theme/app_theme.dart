@@ -17,6 +17,7 @@ class AppTheme {
     scaffoldBackgroundColor: navy,
     primaryColor: gold,
     fontFamily: 'Roboto',
+
     colorScheme: const ColorScheme.dark(
       primary: gold,
       secondary: gold,
@@ -30,11 +31,11 @@ class AppTheme {
       centerTitle: false,
       titleTextStyle: TextStyle(
         color: white,
-<<<<<<< HEAD
-        fontSize: 20,
-        fontWeight: FontWeight.w700,
-        letterSpacing: 0.3,
+        fontSize: 22,
+        fontWeight: FontWeight.bold,
       ),
+      iconTheme: IconThemeData(color: white),
+    ),
 
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: deepNavy,
@@ -83,7 +84,6 @@ class AppTheme {
           borderRadius: BorderRadius.circular(18),
         ),
       ),
->>>>>>> person1-auth-navigation
     ),
   );
 }

@@ -31,10 +31,6 @@ class BottomNavBar extends StatelessWidget {
         selectedItemColor: AppTheme.gold,
         unselectedItemColor: AppTheme.mutedText,
         type: BottomNavigationBarType.fixed,
-<<<<<<< HEAD
-        elevation: 0,
-=======
->>>>>>> person1-auth-navigation
         selectedFontSize: 12,
         unselectedFontSize: 12,
         items: const [
