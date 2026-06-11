@@ -17,22 +17,13 @@ class AppTheme {
     scaffoldBackgroundColor: navy,
     primaryColor: gold,
     fontFamily: 'Roboto',
-<<<<<<< HEAD
-=======
-
->>>>>>> person1-auth-navigation
     colorScheme: const ColorScheme.dark(
       primary: gold,
       secondary: gold,
       surface: cardNavy,
-<<<<<<< HEAD
-      error: Color(0xFFFF4444),
-    ),
-=======
       error: Colors.redAccent,
     ),
 
->>>>>>> person1-auth-navigation
     appBarTheme: const AppBarTheme(
       backgroundColor: navy,
       elevation: 0,
@@ -44,18 +35,6 @@ class AppTheme {
         fontWeight: FontWeight.w700,
         letterSpacing: 0.3,
       ),
-      iconTheme: IconThemeData(color: white),
-    ),
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      backgroundColor: deepNavy,
-      selectedItemColor: gold,
-      unselectedItemColor: Color(0xFF556677),
-=======
-        fontSize: 22,
-        fontWeight: FontWeight.bold,
-      ),
-      iconTheme: IconThemeData(color: white),
-    ),
 
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: deepNavy,
