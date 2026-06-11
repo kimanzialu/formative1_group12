@@ -1,39 +1,8 @@
 import 'package:flutter/material.dart';
+
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
-<<<<<<< HEAD
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppTheme.navy,
-      appBar: AppBar(
-        title: const Text('Profile'),
-      ),
-      body: Center(
-        child: Container(
-          margin: const EdgeInsets.all(24),
-          padding: const EdgeInsets.all(24),
-          decoration: BoxDecoration(
-            color: AppTheme.cardNavy,
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: AppTheme.borderBlue),
-          ),
-          child: const Text(
-            'Profile Screen\nPerson 5 will build this.',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: AppTheme.white,
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-=======
   static const Color bgColor = Color(0xFF041C45);
   static const Color cardColor = Color(0xFF0A2A5F);
   static const Color accent = Color(0xFFF6B21A);
@@ -42,7 +11,6 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: bgColor,
-
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20),
@@ -58,16 +26,13 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
               ),
-
               const CircleAvatar(
                 radius: 50,
                 backgroundImage: NetworkImage(
                   "https://i.pravatar.cc/300",
                 ),
               ),
-
               const SizedBox(height: 15),
-
               const Text(
                 "Aline Umuhoza",
                 style: TextStyle(
@@ -76,30 +41,23 @@ class ProfileScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-
               const SizedBox(height: 5),
-
               const Text(
                 "Kigali Campus",
                 style: TextStyle(
                   color: Colors.white70,
                 ),
               ),
-
               const SizedBox(height: 30),
-
               Row(
-                mainAxisAlignment:
-                    MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: const [
                   _StatItem("23", "Events"),
                   _StatItem("5", "Communities"),
                   _StatItem("87", "Connections"),
                 ],
               ),
-
               const SizedBox(height: 30),
-
               Container(
                 decoration: BoxDecoration(
                   color: cardColor,
@@ -133,36 +91,6 @@ class ProfileScreen extends StatelessWidget {
             ],
           ),
         ),
-      ),
-
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: bgColor,
-        selectedItemColor: accent,
-        unselectedItemColor: Colors.white54,
-        type: BottomNavigationBarType.fixed,
-        currentIndex: 4,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            label: "Home",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: "Explore",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.add_circle),
-            label: "",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.chat_bubble_outline),
-            label: "Chats",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Profile",
-          ),
-        ],
       ),
     );
   }
@@ -226,4 +154,3 @@ class _ProfileTile extends StatelessWidget {
     );
   }
 }
->>>>>>> Person5-communities-chat-profile
