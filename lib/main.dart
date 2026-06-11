@@ -12,7 +12,7 @@ class ALUConnectApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ALU Intercampus Connect',
+      title: 'ALU Pulse',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkTheme,
       home: const OnboardingScreen(),
