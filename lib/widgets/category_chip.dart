@@ -24,7 +24,7 @@ class CategoryChipWidget extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
         decoration: BoxDecoration(
           color: isSelected ? AppTheme.gold : AppTheme.cardNavy,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(8),
           border: Border.all(
             color: isSelected ? AppTheme.gold : AppTheme.borderBlue,
             width: 1.2,

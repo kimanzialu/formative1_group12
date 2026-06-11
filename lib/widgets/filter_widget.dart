@@ -98,7 +98,7 @@ class FilterWidget extends StatelessWidget {
                       horizontal: 16, vertical: 8),
                   decoration: BoxDecoration(
                     color: isSelected ? AppTheme.gold : AppTheme.softNavy,
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(8),
                     border: Border.all(
                       color: isSelected ? AppTheme.gold : AppTheme.borderBlue,
                     ),

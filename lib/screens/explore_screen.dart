@@ -4,6 +4,7 @@ import 'mock_events.dart';
 import 'event_model.dart';
 import '../widgets/category_chip.dart';
 import '../widgets/filter_widget.dart';
+import 'event_detail_screen.dart';
 
 class ExploreScreen extends StatefulWidget {
   const ExploreScreen({super.key});
@@ -129,12 +130,12 @@ final List<Map<String, dynamic>> _categories = [
             child: Container(
               decoration: BoxDecoration(
                 color: AppTheme.cardNavy,
-                borderRadius: BorderRadius.circular(14),
+                borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: AppTheme.borderBlue),
               ),
               child: TextField(
                 controller: _searchController,
-                onChanged: (val) => setState(() => _searchQuery = val),
+                onChanged: (val) => setState(() => _searchQuery = val.trim()),
                 style: const TextStyle(color: AppTheme.white, fontSize: 15),
                 decoration: InputDecoration(
                   hintText: 'Search events, clubs, opportunities...',
@@ -227,7 +228,16 @@ final List<Map<String, dynamic>> _categories = [
   }
 
   Widget _buildEventTile(EventModel event) {
-  return Container(
+  return GestureDetector(
+    onTap: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => EventDetailScreen(event: event),
+        ),
+      );
+    },
+    child: Container(
     padding: const EdgeInsets.all(16),
     decoration: BoxDecoration(
       color: AppTheme.cardNavy,
@@ -331,6 +341,7 @@ final List<Map<String, dynamic>> _categories = [
             ),
           ),
       ],
+    ),
     ),
   );
 }
