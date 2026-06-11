@@ -156,7 +156,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             builder: (context, child) => Theme(
                               data: Theme.of(context).copyWith(
                                 colorScheme: const ColorScheme.dark(
-                                  primary: Color(0xffFF6B00),
+                                  primary: Color(0xFFFFB703),
                                   onPrimary: Colors.white,
                                   surface: Color(0xFF1E1E2A),
                                   onSurface: Colors.white,
@@ -302,7 +302,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () {},
                   child: const Text(
                     'View all',
-                    style: TextStyle(color: Color(0xffFF6B00)),
+                    style: TextStyle(color: Color(0xFFFFB703)),
                   ),
                 ),
               ],
@@ -340,7 +340,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () {},
                   child: const Text(
                     'View all',
-                    style: TextStyle(color: Color(0xffFF6B00)),
+                    style: TextStyle(color: Color(0xFFFFB703)),
                   ),
                 ),
               ],
