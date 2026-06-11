@@ -3,7 +3,7 @@ import '../widgets/bottom_nav_bar.dart';
 import 'home_screen.dart';
 import 'explore_screen.dart';
 import 'create_post_screen.dart';
-import 'chats_screen.dart';
+import 'chat_screen.dart';
 import 'profile_screen.dart';
 
 class MainNavigationScreen extends StatefulWidget {
@@ -20,7 +20,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     HomeScreen(),
     ExploreScreen(),
     CreatePostScreen(),
-    ChatsScreen(),
+    ChatScreen(),
     ProfileScreen(),
   ];
 
