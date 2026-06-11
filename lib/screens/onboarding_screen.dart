@@ -185,7 +185,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         const Text(
-          'ALU Connect',
+          'ALU Pulse',
           style: TextStyle(
             color: AppTheme.white,
             fontSize: 20,
