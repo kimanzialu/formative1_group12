@@ -1,4 +1,4 @@
-import 'event_model.dart';
+import '../models/event_model.dart';
 
 final List<EventModel> mockEvents = [
   EventModel(
