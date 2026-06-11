@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
             return Container(
               padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
               decoration: const BoxDecoration(
-                color: Color(0xFF121216),
+                color: Color(0xFF0A1628),
                 borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
               ),
               child: SingleChildScrollView(
@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           labelText: 'Title',
                           labelStyle: TextStyle(color: Colors.white70),
                           filled: true,
-                          fillColor: Color(0xFF1E1E2A),
+                          fillColor: Color(0xFF112240),
                         ),
                         validator: (v) => (v == null || v.trim().isEmpty)
                             ? 'Please enter a title'
@@ -101,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           labelText: 'Category',
                           labelStyle: TextStyle(color: Colors.white70),
                           filled: true,
-                          fillColor: Color(0xFF1E1E2A),
+                          fillColor: Color(0xFF112240),
                         ),
                         items: const [
                           DropdownMenuItem(
@@ -132,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           labelText: 'Organizer',
                           labelStyle: TextStyle(color: Colors.white70),
                           filled: true,
-                          fillColor: Color(0xFF1E1E2A),
+                          fillColor: Color(0xFF112240),
                         ),
                       ),
                       const SizedBox(height: 12),
@@ -144,7 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           labelText: 'Date',
                           labelStyle: TextStyle(color: Colors.white70),
                           filled: true,
-                          fillColor: Color(0xFF1E1E2A),
+                          fillColor: Color(0xFF112240),
                         ),
                         onTap: () async {
                           final now = DateTime.now();
@@ -180,7 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           labelText: 'Location',
                           labelStyle: TextStyle(color: Colors.white70),
                           filled: true,
-                          fillColor: Color(0xFF1E1E2A),
+                          fillColor: Color(0xFF112240),
                         ),
                       ),
                       const SizedBox(height: 20),
@@ -188,7 +188,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: double.infinity,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xffFF6B00),
+                            backgroundColor: const Color(0xFFFFB703),
                             padding: const EdgeInsets.symmetric(vertical: 14),
                           ),
                           onPressed: () {
@@ -243,9 +243,9 @@ class _HomeScreenState extends State<HomeScreen> {
     final latestOpportunities = _events.where((e) => !e.isFeatured).toList();
 
     return Scaffold(
-      backgroundColor: const Color(0xff0F0F16),
+      backgroundColor: const Color(0xFF0A1628),
       appBar: AppBar(
-        backgroundColor: const Color(0xff0F0F16),
+        backgroundColor: const Color(0xFF0A1628),
         elevation: 0,
         title: const Text(
           'ALU Intercampus',
@@ -262,7 +262,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color(0xffFF6B00), // ALU Orange
+        backgroundColor: const Color(0xFFFFB703), // ALU Orange
         foregroundColor: Colors.white,
         child: const Icon(Icons.add),
         onPressed: () => _showAddEventModal(context),
