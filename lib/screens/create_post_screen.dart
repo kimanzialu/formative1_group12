@@ -20,7 +20,7 @@ class _CreatePostScreenState extends State<CreatePostScreen> {
   DateTime? _selectedDate;
 
   final List<String> _categories = [
-    'Workshop', 'Leadership', 'Tech', 'Competition', 'Social'
+    'Workshop', 'Leadership', 'Hackathorn', 'Competition', 'Social'
   ];
 
   @override
