@@ -14,11 +14,15 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: AppTheme.deepNavy,
-        border: Border(
-          top: BorderSide(color: AppTheme.borderBlue, width: 0.5),
-        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.28),
+            blurRadius: 18,
+            offset: const Offset(0, -6),
+          ),
+        ],
       ),
       child: BottomNavigationBar(
         currentIndex: selectedIndex,
@@ -27,7 +31,10 @@ class BottomNavBar extends StatelessWidget {
         selectedItemColor: AppTheme.gold,
         unselectedItemColor: AppTheme.mutedText,
         type: BottomNavigationBarType.fixed,
+<<<<<<< HEAD
         elevation: 0,
+=======
+>>>>>>> person1-auth-navigation
         selectedFontSize: 12,
         unselectedFontSize: 12,
         items: const [

@@ -1,21 +1,28 @@
 import 'package:flutter/material.dart';
-import 'screens/main_navigation_screen.dart';
 import 'theme/app_theme.dart';
+import 'screens/onboarding_screen.dart';
 
 void main() {
-  runApp(const AluPulseApp());
+  runApp(const ALUConnectApp());
 }
 
-class AluPulseApp extends StatelessWidget {
-  const AluPulseApp({super.key});
+class ALUConnectApp extends StatelessWidget {
+  const ALUConnectApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+<<<<<<< HEAD
       title: 'ALU Pulse',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkTheme,
       home: const MainNavigationScreen(),
+=======
+      title: 'ALU Intercampus Connect',
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.darkTheme,
+      home: const OnboardingScreen(),
+>>>>>>> person1-auth-navigation
     );
   }
 }
